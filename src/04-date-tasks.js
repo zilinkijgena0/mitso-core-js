@@ -122,10 +122,20 @@ function timeSpanToString(startDate, endDate) {
  *    getDay(365, false) => "December, 31"
  *    getDay(366, true) => "December, 31"
  */
-function getDay(/* day, isLeap */) {
-  throw new Error('Not implemented');
-  //ой не
+function getDay(day, isLeap) {
+  const monthLengths = [31, isLeap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  let monthIndex = 0;
+
+  while (day > monthLengths[monthIndex]) {
+    day -= monthLengths[monthIndex];
+    monthIndex++;
+  }
+
+  return `${monthNames[monthIndex]}, ${day}`;
 }
+
+
 
 module.exports = {
   parseDataFromRfc2822,
