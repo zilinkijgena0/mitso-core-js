@@ -17,6 +17,7 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
+
 function concatenateStrings(value1, value2) {
   return value1.concat(value2);
 }
@@ -32,6 +33,7 @@ function concatenateStrings(value1, value2) {
  *   'b'     => 1
  *   ''      => 0
  */
+
 function getStringLength(value) {
   return value.length;
 }
@@ -198,6 +200,7 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
+
  function getRectangleString(width, height) {
   const whitespaceLength = '\\n'.length;
   const realWidth = width - whitespaceLength;
@@ -224,6 +227,7 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
+
 function encodeToRot13(str) {
   return str.split('').map((currentValue, i) => {
     const charI = str.charCodeAt(i);
