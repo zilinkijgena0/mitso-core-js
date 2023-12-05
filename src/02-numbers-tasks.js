@@ -37,7 +37,6 @@ function getCircleCircumference(radius) {
   return Math.PI * radius * 2;
 }
 
-
 /**
  * Returns an average of two given numbers.
  *
